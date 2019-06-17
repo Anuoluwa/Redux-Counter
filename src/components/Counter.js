@@ -2,6 +2,9 @@ import React, { Component } from "react";
 import { connect } from 'react-redux';
 import { increment, decrement } from '../actions';
 
+
+
+
 class Counter extends Component {
     incrementIfOdd = () => {
         // Stretch Problem: Implement an increment function that
@@ -12,6 +15,8 @@ class Counter extends Component {
     incrementAsync = () => {
         // Stretch Problem: Implement an increment function that
         // increments after waiting for one second
+        //
+        //this implementation is not using redux-thunk, since we are not fetching any data yet
         setTimeout(() => this.props.increment(), 1000);
     };
 
